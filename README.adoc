@@ -1,0 +1,8 @@
+:hide-uri-scheme:
+= debian-stratis
+
+== What is This?
+This respository is to enable the use of https://stratis-storage.github.io/[Stratis] on Debian-based GNU/Linux distros.
+
+== Maintenance
+Maintenance of this repository is best-effort.  I make no garantees of accuracy, completeness, or suitability for any purpose.
