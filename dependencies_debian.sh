@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install dependencies for building and testing Stratis on Debian.
-# Packages are assumed to be for your native arcitecture.
+# Packages are assumed to be for your native architecture.
 # For clarity, packages are grouped into sections:
 # - Base build tools (git, make)
 # - Base toolchain (compilers and associated libraries)
