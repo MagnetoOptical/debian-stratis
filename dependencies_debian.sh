@@ -14,22 +14,22 @@ apt -y install git \
 	libglib2.0-dev
 	llvm-11 \
 	llvm-11-dev \
+	libudev-dev \
 	\
 	asciidoc \
 	clevis \
 	clevis-luks \
 	libcryptsetup-dev \
 	libdbus-1-dev \
-	?dbus-python-devel \
-	?device-mapper-persistent-data \
+	python3-dbus \
 	libssl-dev \
 	python3-dbus \
 	libsystemd-dev \
 	xfsprogs \
 	\
+	python3-pip
 	python3-coverage \
 	python3-dateutil \
-	?python3-justbytes \
 	python3-packaging \
 	python3-psutil \
 	python3-pyparsing \
