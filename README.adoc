@@ -12,5 +12,5 @@ Maintenance of this repository is best-effort.  I make no garantees of accuracy,
 1. Install https://www.rust-lang.org/[Rust]
 2. Clone this repository, and run dependencies_debian.sh
 3. Install stratisd: ```cargo install stratisd```
-4. Install external python requirements ```python3 -m pip install python3-justbytes```
-5. Install stratis-cli ```python3 -m install stratis-cli```
+4. Install external python requirements ```python3 -m pip install justbytes```
+5. Install stratis-cli using the instructions at the https://github.com/stratis-storage/stratis-cli[official repo]
