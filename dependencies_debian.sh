@@ -25,6 +25,7 @@ apt -y install git \
 	libssl-dev \
 	python3-dbus \
 	libsystemd-dev \
+	thin-provisioning-tools \
 	xfsprogs \
 	\
 	python3-pip
