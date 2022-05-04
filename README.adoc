@@ -14,3 +14,16 @@ Maintenance of this repository is best-effort.  I make no garantees of accuracy,
 3. Install stratisd by following the build instructions at https://github.com/stratis-storage/stratisd[the stratisd repo]
 4. Install external python requirements ```python3 -m pip install justbytes```
 5. Install stratis-cli using the instructions at the https://github.com/stratis-storage/stratis-cli[official repo]
+
+NOTE: Debian is not supported by stratis.  What follows below is a work in progress as I figure it out.
+
+There are some issues left to be resolved.  I'll write a script to take care of them as get a chance.
+
+1. Cloning the stratisd repo and runing ```make``` succeeds, but ```sudo make install``` fails because docs are made in a separate step.
+2. When stratisd is built it appears to go to the default cargo install dir ($HOME/.cargo/bin) and the Makefile does not accomodate that.
+3. The systemd services need to be installed.  (```make install``` might do this later if docs succeed, haven't checked)
+4. stratisd fails to start because it cannot find ```thin_check``` which is provided by thin-provisioning-tools
+5. With ```thin_check``` present, stratisd complains as follows:
+
+[quote, stratisd]
+The IPC thread exited with an error: Dbus error: Connection "1.25" is not allowed to own the service "org.storage.stratis3" due to security policies in the configuration file; shutting down stratisd...
