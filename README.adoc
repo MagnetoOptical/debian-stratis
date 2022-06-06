@@ -31,7 +31,7 @@ At the time of writing all modern file systems in public use (APFS, Btrfs, ReFS,
 4. Install external python requirements ```python3 -m pip install justbytes```
 5. Install stratis-cli using the instructions at the https://github.com/stratis-storage/stratis-cli[official repo]
 
-NOTE: Debian is not supported by stratis.  What follows below is a work in progress as I figure it out.
+NOTE: Debian is not supported by stratis.  What follows below is a work in progress as I figure it out.  Contributions welcome.
 
 There are some issues left to be resolved.  I'll write a script to take care of them as get a chance.
 
