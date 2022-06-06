@@ -20,6 +20,9 @@ If you have NVDIMMS or some really fast, high wear (DAS) NVMe drives, ZFS may be
 
 More information on Btrfs RAID5/6 here: https://btrfs.readthedocs.io/en/latest/btrfs-man5.html#raid56-status-and-recommended-practices
 
+== A Note About the Current State of Storage
+At the time of writing all modern file systems in public use (APFS, Btrfs, ReFS, ZFS, Stratis, LVM2 + ?) are slightly better than awful. The fact we even made it this far is amazing. The reality is that storage is hard. Safe, performant storage is a gargantuan effort, and one of the most difficult problems for humanity to solve.
+
 == Installation
 
 1. Install https://www.rust-lang.org/[Rust]
