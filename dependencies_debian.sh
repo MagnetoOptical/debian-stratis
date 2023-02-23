@@ -29,6 +29,7 @@ apt -y install git \
 	xfsprogs \
 	\
 	python3-pip
+	python3-venv
 	python3-coverage \
 	python3-dateutil \
 	python3-packaging \
@@ -38,3 +39,14 @@ apt -y install git \
 	python3-semantic-version \
 	python3-setuptools \
 	python3-wcwidth
+
+# Needs logic control so this variable declaration isn't duplicated on successive runs
+echo "export PATH=$HOME/.local/bin:$HOME/.cargo/bin" >> $HOME/.bashrc
+source $HOME/.bashrc
+
+# Official Rust install one-liner
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+python3 -m venv venv
+. venv/bin/activate
+python3 -m pip install justbytes
