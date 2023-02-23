@@ -22,14 +22,6 @@ If you have NVDIMMS or some really fast, high wear (DAS) NVMe drives, ZFS may be
 As far as L2ARC and SLOG are concerned...
 IF you aren't using NVDIMMS or REALLY fast (enterprise SLC/MLC) NVMe's, an L2ARC is marginally helpful and an SLOG is utterly pointless.  Such situations negate the benefits of the complexity of a ZFS setup...which brings us back to Btrfs (and making sure you have stable hardware).  At this point RAID5/6 on Btrfs is fine as long as metadata is RAID1/RAID1c3, respectively, with some caveats.
 
-*My recommendation at this point is to rely on mdadm RAID 5/6 with a write journal and a Btrfs single volume on top of those.*
-If you choose to go this route, be aware of the following:
-
-* Your write journal should be an SSD faster than the combined IOPS and throughput of your RAID array.
-* You'll need one journal disk per RAID group
-* Your journal SSD should be at least as large as the RAID group or mdadm will complain
-* If you opt to forego a write journal, you can add it later with ```mdadm --manage /dev/md0 --add-journal /dev/sdf``` (for example)
-
 More information on Btrfs RAID5/6 here: https://btrfs.readthedocs.io/en/latest/btrfs-man5.html#raid56-status-and-recommended-practices
 
 == A Note About the Current State of Storage
