@@ -26,11 +26,9 @@ At the time of writing all modern file systems in public use (APFS, Btrfs, ReFS,
 
 == Installation
 
-1. Install https://www.rust-lang.org/[Rust]
-2. Clone this repository, and run dependencies_debian.sh
-3. Install stratisd by following the build instructions at https://github.com/stratis-storage/stratisd[the stratisd repo]
-4. Install external python requirements ```python3 -m pip install justbytes```
-5. Install stratis-cli using the instructions at the https://github.com/stratis-storage/stratis-cli[official repo]
+1. Clone this repository, and run dependencies_debian.sh
+
+At this stage, you'll need to troubleshoot what isn't working.
 
 NOTE: Debian is not supported by stratis.  What follows below is a work in progress as I figure it out.  Contributions welcome.
 
