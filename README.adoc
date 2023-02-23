@@ -13,6 +13,7 @@ It's not.  Stratis relies on device mapper and lvm2 to create thinly provisioned
 1. Thinly provisioned volumes cannnot be scrubbed by device mapper or LVM which means there is no sub-filesystem garantee of consistency.
 2. XFS does not store checksums of data in a way that allows it to recover corrupted data (due to kernel panic, spontaneous power off, or bit rot--among others).
 3. Using XFS means your storage pools are prone to violent and catastrophic corruption of data should a kernel panic or spontaneous power off event occur without an NVDIMM or other power-off caching solution in place (which is not supported by Stratis).
+4. Stratis appears to create one giant linear pool and format that as XFS, so even if the pool was thick provisioned, there'd be no checsum/FEC to use to recover damanged data by doing a scrub.
 
 Given this, and even with the write hole problem of Btrfs, your data is still safer on a Btrfs RAID5/6 volume (as of 5.14).  That said, while performance has improved greatly, Btrfs cannot yet achieve the IOPs of XFS.
 
