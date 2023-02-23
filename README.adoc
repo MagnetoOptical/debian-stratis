@@ -34,13 +34,6 @@ At the time of writing all modern file systems in public use (APFS, Btrfs, ReFS,
 
 NOTE: Debian is not supported by stratis.  What follows below is a work in progress as I figure it out.  Contributions welcome.
 
-There are some issues left to be resolved.  I'll write a script to take care of them as get a chance.
+There are some issues left to be resolved.  The script to install dependencies and resolve build issues is a work in progress.  The "script" currently provided lacks flow control, error check, dependency resolution and install validation.  It is little more than a list of commands you might type in your terminal if trying to do this yourself, and you were in a hurry for a proof-of-concept.
 
-1. Cloning the stratisd repo and runing ```make``` succeeds, but ```sudo make install``` fails because docs are made in a separate step.
-2. When stratisd is built it appears to go to the default cargo install dir ($HOME/.cargo/bin) and the Makefile does not accomodate that.
-3. The systemd services need to be installed.  (```make install``` might do this later if docs succeed, haven't checked)
-4. stratisd fails to start because it cannot find ```thin_check``` which is provided by thin-provisioning-tools
-5. With ```thin_check``` present, stratisd complains as follows:
-
-[quote, stratisd]
-The IPC thread exited with an error: Dbus error: Connection "1.25" is not allowed to own the service "org.storage.stratis3" due to security policies in the configuration file; shutting down stratisd...
+1. Currently even with ```make build-all``` and ```make install``` the binaries, udev rules, dbus polcies, and systemd services are not installed.  This is likely something I am doing wrong, or an errant personal expection not being met.  But I'm getting close!
