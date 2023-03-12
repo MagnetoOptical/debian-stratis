@@ -18,7 +18,7 @@ I've spent a lot of time (years now) with a misconception of what Stratis is and
 6. Bit rot may be a concern but it is not a high priority because of #4 or because data simply isn't stored long term on your Stratis pool
 
 == A Note About the Current State of Storage
-At the time of writing all modern file systems in public use (APFS, Btrfs, ReFS, ZFS, Stratis, LVM2 + ?) are slightly better than awful. The fact we even made it this far is amazing. The reality is that storage is hard. Safe, performant storage is a gargantuan effort, and one of the most difficult problems for humanity to solve.  Do not trust that your primary storage solution will always be trustworthy.  Over a long enought time span, the probability of failure is 100%.
+At the time of writing all modern file systems in public use (APFS, Btrfs, ReFS, ZFS, Stratis, LVM2 + ?) are slightly better than awful. The fact we even made it this far is amazing. The reality is that storage is hard. Safe, performant storage is a gargantuan effort, and one of the most difficult problems for humanity to solve.  Do not trust that your primary storage solution will always be trustworthy.  Over a long enough time span, the probability of failure is 100%.
 
 == Installation
 
