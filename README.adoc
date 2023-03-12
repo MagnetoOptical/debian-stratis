@@ -25,7 +25,8 @@ At the time of writing all modern file systems in public use (APFS, Btrfs, ReFS,
 
 == Installation
 
-1. Clone this repository, and run dependencies_debian.sh
+1. Clone this repository
+2. run dependencies_debian.sh or manually work through each line to make sure it's right
 
 At this stage, you'll need to troubleshoot what isn't working.
 
@@ -33,4 +34,6 @@ NOTE: Debian is not supported by stratis.  What follows below is a work in progr
 
 There are some issues left to be resolved.  The script to install dependencies and resolve build issues is a work in progress.  The "script" currently provided lacks flow control, error check, dependency resolution and install validation.  It is little more than a list of commands you might type in your terminal if trying to do this yourself, and you were in a hurry for a proof-of-concept.
 
-1. Currently even with ```make build-all``` and ```make install``` the binaries, udev rules, dbus polcies, and systemd services are not installed.  This is likely something I am doing wrong, or an errant personal expection not being met.  But I'm getting close!
+3. After building and installing, reboot.  
+4. Start the stratisd.service daemon, and ensure it's running.  If so, enable.
+5. Create a pool, eg ```sudo stratis pool create test-pool /dev/xvdb /dev/xvdc /dev/xvde```
