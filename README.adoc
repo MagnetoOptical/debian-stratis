@@ -2,7 +2,7 @@
 = debian-stratis
 
 == What is This?
-This respository is to enable the use of https://stratis-storage.github.io/[Stratis] on Debian-based GNU/Linux distros.
+This respository is to enable the use of https://stratis-storage.github.io/[Stratis] on Debian-based GNU/Linux distros.  I am currently working on using GitHub Actions to generate a release of stratisd and stratis-cli packages for Debian distros on the AMD64 architecture.
 
 == Why Go Through All This Trouble?
 I prefer Debian.  There's ideological differences and tooling that I'm just more comfortable with...but Stratis is an interesting thing and I think it should be available elsewhere.  If any of this resonates with you, know that contributions are welcome.
