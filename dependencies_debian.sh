@@ -5,7 +5,7 @@
 sudo apt -y install git make clang gcc libglib2.0-dev llvm-11 llvm-11-dev libudev-dev \
         curl asciidoc clevis clevis-luks libcryptsetup-dev libdbus-1-dev rustc cargo\
 	python3-dbus libssl-dev python3-dbus libsystemd-dev \
-	python3-jsonschema python3-pydbus python3-pycparser python3-sysv_ipc python3-setuptools \
+	python3-jsonschema python3-pydbus python3-pycparser python3-setuptools \
 	thin-provisioning-tools xfsprogs python3-pip python3-venv python3-coverage \
 	python3-dateutil python3-packaging python3-psutil python3-pyparsing \
 	python3-pyudev 	python3-semantic-version python3-setuptools \
